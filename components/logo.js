@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
@@ -13,11 +12,11 @@ line-height: 20px;
 padding: 10px;
 
 img {
-  transition: 0.2s ease-in-out;
+  transition: 50ms ease;
 }
 
 &:hover img {
-  transform: scale(1.2); 
+  transform: scale(1.15); 
 }
 `
 

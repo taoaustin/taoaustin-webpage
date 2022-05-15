@@ -1,5 +1,6 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Layout from "../components/layout";
+import { ChakraProvider } from "@chakra-ui/react"
+import Layout from "../components/layout"
+
 function App({ Component, pageProps }) {
   return (
     <ChakraProvider>
@@ -7,7 +8,7 @@ function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
-  );
+  )
 }
 
-export default App;
+export default App

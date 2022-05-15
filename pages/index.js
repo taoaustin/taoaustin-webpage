@@ -1,24 +1,55 @@
-import { Container, Box, Heading } from "@chakra-ui/react";
+import { Container, Box, Heading, Flex } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
     <>
-      <Box borderRadius="lg" bg="gray" p={3} mb={6} align={"center"}>
+      <Box borderRadius="lg" bg="gray" p={3} mb={6} align="center">
         Hi, I&apos;m Austin. I'm a software developer.
       </Box>
 
-      <Box display="flex">
-        <Box flexGrow={1}>
+      <Flex direction="column">
           <Heading as="h2" variant="page-title">
             Austin Tao
           </Heading>
           <p>
             Student / Developer / gamer?
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            yo
           </p>
-        </Box>
-      </Box>
+      </Flex>
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

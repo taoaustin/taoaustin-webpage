@@ -4,7 +4,7 @@ import {
   Container,
   Box,
   Link,
-  Stack,
+  HStack,
   Heading,
   Flex,
   Menu,
@@ -31,15 +31,27 @@ const Navlink = ({navhref, children}) => {
 const Navbar = () => {
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={5}>
-        <Container maxW="container.md">
-          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-            <Logo />
-          </Flex>
-        </Container>
+      {/* backdropFilter/Blur don't work in firefox, https://chakra-ui.com/docs/styled-system/features/style-props#filter */}
+      <Box 
+        position="fixed" 
+        w="full" 
+        bg={useColorModeValue('rgba(237, 242, 247, 0.5)', 
+                              'rgba(23, 25, 35, 0.5)')} 
+        px={5}
+        backdropFilter='auto'
+        backdropBlur='5px'
+      >
+        <Flex h={16} align="center">
+          <Container maxW="container.md">
+              <Logo />
+              <HStack>
+
+              </HStack>
+          </Container>
+        </Flex>
       </Box>
     </>
   )
-};
+}
 
-export default Navbar;
+export default Navbar
