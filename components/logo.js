@@ -5,37 +5,39 @@ import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
 font-weight: bold;
-font-size: 18px;
+font-size: 20px;
 display: inline-flex;
 align-items: center;
 height: 30px;
 line-height: 20px;
 padding: 10px;
 
+img {
+  transition: 0.2s ease-in-out;
+}
+
 &:hover img {
-  transform: scale(1.1);
-}
+  transform: scale(1.2); 
+}
 `
 
 
 const Logo = () => {
-  const tao = `images/logo${useColorModeValue('', '-dark')}.png`
-
+  const tao = `/images/logo${useColorModeValue('', '-dark')}.png`
   return (
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={tao} width={20} height={20} alt="logo" />
+          <img src={tao} width={25} height={25} alt="logo" />
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c'
-            fontWeight="bold"
-            ml={3}
+            fontWeight="normal"
+            ml={1.5}
           >
             Austin Tao
           </Text>
         </LogoBox>
-        Austin Tao
       </a>
     </Link>
   )

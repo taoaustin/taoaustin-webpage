@@ -1,18 +1,19 @@
 import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
-
-const Background = ({ children }) => {
+import Navbar from "./navbar"
+const Layout = ({ children }) => {
   return (
     <Box as="main" pb={8}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Austin Tao</title>
       </Head>
-      <Container maxW="container.md" pt={14}>
+      <Navbar />
+      <Container maxW="container.sm" pt={14} >
         {children}
       </Container>
     </Box>
   );
 };
 
-export default Background;
+export default Layout;
