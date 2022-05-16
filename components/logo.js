@@ -10,9 +10,10 @@ align-items: center;
 height: 30px;
 line-height: 20px;
 padding: 10px;
+margin-right: 20px;
 
 img {
-  transition: 50ms ease;
+  transition: 150ms ease;
 }
 
 &:hover img {

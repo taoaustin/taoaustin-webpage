@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <title>Austin Tao</title>
       </Head>
       <Navbar />
-      <Container maxW="container.sm" pt={14} >
+      <Container maxW="container.sm" pt={14}>
         {children}
       </Container>
     </Box>
