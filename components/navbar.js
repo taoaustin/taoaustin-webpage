@@ -12,8 +12,9 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
 
 const Navlink = ({ navhref, children }) => {
@@ -27,6 +28,7 @@ const Navlink = ({ navhref, children }) => {
 };
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       {/* backdropFilter/Blur don't work in firefox, https://chakra-ui.com/docs/styled-system/features/style-props#filter */}
@@ -45,7 +47,7 @@ const Navbar = () => {
           <Container maxW="container.md" display="flex" flexDirection="row">
             <Logo />
 
-            <HStack spacing={8} display={{ base: "none", md: "flex" }}>
+            <HStack spacing={8} display={{ base: "none", md: "inline-flex" }}>
               <Navlink navhref="/resume">Resume</Navlink>
               <Navlink navhref="/nice">Blog</Navlink>
               <Navlink navhref="https://github.com/buttonmashing/taoaustin-webpage">
@@ -57,17 +59,25 @@ const Navbar = () => {
             {/* displays the hamburger menu when viewport is small enough */}
             <Flex flex={1}>
               <Box
-                display={{ base: "inline-block", md: "none" }}
-                mr={0}
+                display="flex"
+                mr="10px"
                 ml="auto"
+                gap="5px"
               >
+                <IconButton 
+                  aria-label="Theme toggle"
+                  onClick={toggleColorMode}
+                  colorScheme={useColorModeValue('blue', 'yellow')}
+                  icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+                >
+                </IconButton>
                 <Menu isLazy>
                   <MenuButton
                     as={IconButton}
                     icon={<HamburgerIcon />}
                     aria-label="Options"
                     variant="outline"
-                    mr={1.5}
+                    display={{ base: "inline-flex", md: "none" }}
                   />
                   <MenuList>
                     <Navlink navhref="/resume">
