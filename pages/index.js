@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <>
       <Box borderRadius="lg" bg="gray" p={3} mb={6} align="center">
-        Hi, I&apos;m Austin. I'm a software developer.
+        Hi, I&apos;m Austin. I&apos;m a software developer.
       </Box>
 
       <Flex direction="column">
