@@ -1,6 +1,6 @@
-import Head from "next/head"
-import { Box, Container } from "@chakra-ui/react"
-import Navbar from "./navbar"
+import Head from "next/head";
+import { Box, Container } from "@chakra-ui/react";
+import Navbar from "./navbar";
 const Layout = ({ children }) => {
   return (
     <Box as="main" pb={8}>
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         {children}
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
