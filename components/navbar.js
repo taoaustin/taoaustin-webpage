@@ -17,16 +17,6 @@ import {
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
 
-const Navlink = ({ navhref, children }) => {
-  return (
-    <NextLink href={navhref} passHref>
-      <Link display="flex" alignItems="center" gap="5px">
-        {children}
-      </Link>
-    </NextLink>
-  );
-};
-
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
@@ -48,12 +38,30 @@ const Navbar = () => {
             <Logo />
 
             <HStack spacing={8} display={{ base: "none", md: "inline-flex" }}>
-              <Navlink navhref="/resume">Resume</Navlink>
-              <Navlink navhref="/nice">Blog</Navlink>
-              <Navlink navhref="https://github.com/buttonmashing/taoaustin-webpage">
+              <Link                  
+                href="https://drive.google.com/file/d/1bZzt6EfhcP-LKQLyZHHIl1rswb78gGmv/view?usp=sharing"
+                target="_blank"
+              >
+                Resume
+              </Link>
+
+              <NextLink href="/blog" passHref>
+                <Link>
+                  Blog
+                </Link>
+              </NextLink>
+
+              <Link 
+                display="flex" 
+                alignItems="center" 
+                gap="5px"
+                href="https://github.com/buttonmashing/taoaustin-webpage"
+                target="_blank"
+              >
                 <FaGithub />
                 Source
-              </Navlink>
+              </Link>
+
             </HStack>
 
             {/* displays the hamburger menu when viewport is small enough */}
@@ -80,15 +88,26 @@ const Navbar = () => {
                     display={{ base: "inline-flex", md: "none" }}
                   />
                   <MenuList>
-                    <Navlink navhref="/resume">
-                      <MenuItem>Resume</MenuItem>
-                    </Navlink>
-                    <Navlink navhref="/blog">
-                      <MenuItem>Blog</MenuItem>
-                    </Navlink>
-                    <Navlink navhref="https://github.com/buttonmashing/taoaustin-webpage">
-                      <MenuItem gap="5px">Source</MenuItem>
-                    </Navlink>
+                    <MenuItem 
+                      as={Link}                      
+                      href="https://drive.google.com/file/d/1bZzt6EfhcP-LKQLyZHHIl1rswb78gGmv/view?usp=sharing"
+                      target="_blank"
+                    >
+                      Resume
+                    </MenuItem>
+
+                    <NextLink href="/blog" passHref>
+                        <MenuItem as={Link}>Blog</MenuItem>
+                    </NextLink>
+                    
+                    <MenuItem
+                      as={Link}
+                      href="https://github.com/buttonmashing/taoaustin-webpage"
+                      target="_blank"
+                    >
+                      Source
+                    </MenuItem>
+
                   </MenuList>
                 </Menu>
               </Box>
