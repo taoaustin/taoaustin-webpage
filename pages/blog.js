@@ -1,7 +1,7 @@
-import { Box, Container, AspectRatio } from "@chakra-ui/react";
+import { Box, Container, Center } from "@chakra-ui/react";
 const Resume = () => {
   return (
-      <div>temp</div>
+      <Center p="10rem">Coming soon!</Center>
   );
 };
 

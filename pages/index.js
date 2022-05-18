@@ -46,7 +46,6 @@ const HomePage = () => {
           <br></br>
           <br></br>
           <br></br>
-          yo
         </p>
       </Flex>
     </>
