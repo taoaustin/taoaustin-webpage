@@ -55,7 +55,7 @@ const Navbar = () => {
                 display="flex" 
                 alignItems="center" 
                 gap="5px"
-                href="https://github.com/buttonmashing/taoaustin-webpage"
+                href="https://github.com/taoaustin/taoaustin-webpage"
                 target="_blank"
               >
                 <FaGithub />
