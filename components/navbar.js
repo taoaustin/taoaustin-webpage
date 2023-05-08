@@ -17,6 +17,17 @@ import {
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
 
+const MenuLink = ({children, ...props}) => {
+    return (
+        <MenuItem
+          _focus={{bg: useColorModeValue('gray.100', 'gray.700')}} 
+          as={Link}                      
+          {...props}
+        >
+          {children}
+        </MenuItem>
+    )};
+
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
@@ -79,7 +90,7 @@ const Navbar = () => {
                   icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
                 >
                 </IconButton>
-                <Menu isLazy>
+                <Menu isLazy autoSelect={false}>
                   <MenuButton
                     as={IconButton}
                     icon={<HamburgerIcon />}
@@ -87,26 +98,25 @@ const Navbar = () => {
                     variant="outline"
                     display={{ base: "inline-flex", md: "none" }}
                   />
-                  <MenuList>
-                    <MenuItem 
-                      as={Link}                      
+                  <MenuList
+                    bg={useColorModeValue('white', 'gray.900')}>
+                    <MenuLink
                       href="https://drive.google.com/file/d/1bZzt6EfhcP-LKQLyZHHIl1rswb78gGmv/view?usp=sharing"
                       target="_blank"
                     >
                       Resume
-                    </MenuItem>
+                    </MenuLink>
 
                     <NextLink href="/blog" passHref>
-                        <MenuItem as={Link}>Blog</MenuItem>
+                        <MenuLink>Blog</MenuLink>
                     </NextLink>
                     
-                    <MenuItem
-                      as={Link}
-                      href="https://github.com/buttonmashing/taoaustin-webpage"
+                    <MenuLink
+                      href="https://github.com/taoaustin/taoaustin-webpage"
                       target="_blank"
                     >
                       Source
-                    </MenuItem>
+                    </MenuLink>
 
                   </MenuList>
                 </Menu>

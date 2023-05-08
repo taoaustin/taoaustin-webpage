@@ -1,22 +1,18 @@
-import { Container, Box, Heading, Flex } from "@chakra-ui/react";
+import { Container, Box, Heading, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
     <>
-      <Box borderRadius="lg" bg="gray" p={3} mb={6} align="center">
-        Hi, I&apos;m Austin. I&apos;m a software developer.
+      <Box mt={20} borderRadius="2xl" bg={useColorModeValue("blackAlpha.400", "whiteAlpha.100")} p={3} mb={6} align="center">
+        Hi, I&apos;m Austin!
       </Box>
 
       <Flex direction="column">
-        <Heading as="h2" variant="page-title">
-          Austin Tao
+        <Heading textDecoration={"underline"} fontSize="lg" as="h3" textUnderlineOffset={4} textDecorationThickness={1} marginBottom={2}>
+          About
         </Heading>
         <p>
-          Student / Developer
-          <br></br>
-          <br></br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          <br></br>
+I am Computer Science student at the University of Waterloo currently in my 4th year. I'm a software developer with experience working on the backend. While on the side, I enjoy messing around with game dev and some UI programming (like for this site!). Check out my resume!
           <br></br>
           <br></br>
           <br></br>
