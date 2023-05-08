@@ -12,7 +12,7 @@ const HomePage = () => {
           About
         </Heading>
         <p>
-I am Computer Science student at the University of Waterloo currently in my 4th year. I'm a software developer with experience working on the backend. While on the side, I enjoy messing around with game dev and some UI programming (like for this site!). Check out my resume!
+I am Computer Science student at the University of Waterloo currently in my 4th year. I&apos;m a software developer with experience working on the backend. While on the side, I enjoy messing around with game dev and some UI programming (like for this site!). Check out my resume!
           <br></br>
           <br></br>
           <br></br>
