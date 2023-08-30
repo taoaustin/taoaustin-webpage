@@ -3,7 +3,7 @@ import { Container, Box, Heading, Flex, useColorModeValue } from "@chakra-ui/rea
 const HomePage = () => {
   return (
     <>
-      <Box mt={20} borderRadius="2xl" bg={useColorModeValue("blackAlpha.400", "whiteAlpha.100")} p={3} mb={6} align="center">
+      <Box mt={8} borderRadius="2xl" bg={useColorModeValue("blackAlpha.400", "whiteAlpha.100")} p={3} mb={6} align="center">
         Hi, I&apos;m Austin!
       </Box>
 
