@@ -16,7 +16,9 @@ export default function Post(post) {
           {format(parseISO(post.date), "LLL d, yyyy")} 
         </Text>
       </Box>
-      <ReactMarkdown components={ChakraUIRenderer()} children={post.content} skipHtml />
+      <ReactMarkdown components={ChakraUIRenderer()} skipHtml>
+        {post.content}
+      </ReactMarkdown>
     </Box>
     )
 }
