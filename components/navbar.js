@@ -98,8 +98,7 @@ const Navbar = () => {
                     variant="outline"
                     display={{ base: "inline-flex", md: "none" }}
                   />
-                  <MenuList
-                    bg={useColorModeValue('white', 'gray.900')}>
+                  <MenuList>
                     <MenuLink
                       href="https://drive.google.com/file/d/1bZzt6EfhcP-LKQLyZHHIl1rswb78gGmv/view?usp=sharing"
                       target="_blank"
