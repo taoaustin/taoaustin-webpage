@@ -37,8 +37,8 @@ const Navbar = () => {
         position="fixed"
         w="full"
         bg={useColorModeValue(
-          "rgba(237, 242, 247, 0.5)",
-          "rgba(23, 25, 35, 0.5)"
+          "rgba(226, 223, 221, 0.5)",
+          "rgba(47, 47, 47, 0.1)"
         )}
         px={5}
         backdropFilter="auto"
